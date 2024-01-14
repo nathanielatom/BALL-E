@@ -10,3 +10,5 @@ mkdir build
 g++-10 -std=c++20 -c source/spherical_fit.cpp -o build/spherical_fit.so
 g++-10 -std=c++20 build/spherical_fit.so source/spherical_fit.hpp source/main.cpp -o build/main
 ```
+
+### Installation
