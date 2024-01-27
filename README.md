@@ -1,14 +1,26 @@
 # BALL-E
-A C++ library for decomposing an arbitrary function on a sphere into spherical harmonics.
+A WIP C++ library for decomposing an arbitrary function on a sphere into spherical harmonics.
 
-### Compiling
+### Setup
 
 Needs GCC Version 10 or greater.
 
+#### Linux
+
+Packages: `build-essential g++-13` # or any version >= 10
+
+#### Mac
+
 ```
-mkdir build
-g++-10 -std=c++20 -c source/spherical_fit.cpp -o build/spherical_fit.so
-g++-10 -std=c++20 build/spherical_fit.so source/spherical_fit.hpp source/main.cpp -o build/main
+xcode-select --install # and also insteall brew: https://docs.brew.sh/Installation
+brew install gcc
+ls $(brew --prefix gcc)/bin/g++* # pick a version >= 10 and use the full path when compiling
 ```
 
-### Installation
+### Compiling
+
+```
+mkdir build
+g++-10 -std=c++20 -c source/spherical_fit.cpp -o build/spherical_fit.o
+g++-10 -std=c++20 build/spherical_fit.o source/spherical_fit.hpp source/main.cpp -o build/main
+```
