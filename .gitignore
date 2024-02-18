@@ -1,5 +1,6 @@
 # Build dir
 build/
+data/
 
 # Prerequisites
 *.d
